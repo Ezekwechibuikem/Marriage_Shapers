@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Card, Button, Badge, Modal, Form, Alert } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faClock, faMapMarkerAlt, faNairaSign } from '@fortawesome/free-solid-svg-icons';
-import { PaystackButton } from 'react-paystack';
+//import { PaystackButton } from 'react-paystack';
 import './EventCard.css';
 
 const EventCard = ({ 
@@ -99,20 +99,6 @@ const EventCard = ({
     }
   };
 
-  const paystackProps = {
-    email: userDetails.email,
-    amount: price, // Amount in kobo
-    publicKey,
-    text: `Pay ₦${(price / 100).toLocaleString()} for ${title}`,
-    onSuccess: handlePaymentSuccess,
-    onClose: handlePaymentClose,
-    metadata: {
-      name: userDetails.name,
-      phone: userDetails.phone,
-      eventId,
-      eventTitle: title
-    }
-  };
 
   return (
     <>
@@ -238,12 +224,30 @@ const EventCard = ({
           <Button variant="secondary" onClick={() => setShowPaymentModal(false)}>
             Cancel
           </Button>
-          <PaystackButton 
-            {...paystackProps}
+          <Button
             className="btn btn-primary"
             disabled={!userDetails.name || !userDetails.email || !userDetails.phone}
-          />
+            onClick={() => {
+              const handler = window.PaystackPop.setup({
+                key: publicKey,
+                email: userDetails.email,
+                amount: price, // already in kobo
+                metadata: {
+                  name: userDetails.name,
+                  phone: userDetails.phone,
+                  eventId,
+                  eventTitle: title
+                },
+                callback: handlePaymentSuccess, // runs after payment success
+                onClose: handlePaymentClose // runs if user closes dialog
+              });
+              handler.openIframe(); // 🚀 open payment pop-up
+            }}
+          >
+            Pay ₦{(price / 100).toLocaleString()}
+          </Button>
         </Modal.Footer>
+
       </Modal>
     </>
   );
