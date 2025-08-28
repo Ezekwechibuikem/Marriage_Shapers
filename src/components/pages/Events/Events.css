@@ -1,0 +1,140 @@
+
+/* Featured Events Section */
+.featured-events-section {
+    padding-top: var(--spacing-xl);
+  }
+  
+  /* All Events Section */
+  .all-events-section {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+  }
+  
+  /* Events Filters */
+  .events-filters {
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--box-shadow-sm);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .category-filters {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .category-filter-btn {
+    border-radius: var(--border-radius-pill);
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+  }
+  
+  .format-filter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .format-select {
+    max-width: 200px;
+    border-radius: var(--border-radius-sm);
+    border-color: var(--medium-gray);
+    padding: 0.5rem 1rem;
+  }
+  
+  /* No Events Found */
+  .no-events-found {
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--box-shadow-sm);
+  }
+  
+  .no-events-found h3 {
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .no-events-found p {
+    color: var(--dark-gray);
+  }
+  
+  /* Calendar Section */
+  .calendar-section {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .calendar-content {
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--box-shadow-md);
+  }
+  
+  .calendar-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .calendar-content h2 {
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--secondary-color);
+  }
+  
+  .calendar-content p {
+    color: var(--dark-gray);
+    margin-bottom: var(--spacing-lg);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Host Event Section */
+  .host-event-section {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .host-event-content {
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--box-shadow-md);
+  }
+  
+  .host-event-content h2 {
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--secondary-color);
+  }
+  
+  .host-event-content p {
+    color: var(--dark-gray);
+    margin-bottom: var(--spacing-lg);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 991px) {
+    .format-filter {
+      justify-content: flex-start;
+      margin-top: var(--spacing-sm);
+    }
+    
+    .calendar-content,
+    .host-event-content {
+      padding: var(--spacing-md);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .calendar-content h2,
+    .host-event-content h2 {
+      font-size: 1.75rem;
+    }
+  }
+  

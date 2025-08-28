@@ -1,0 +1,123 @@
+
+/* About Section */
+.about-section {
+    overflow: hidden;
+  }
+  
+  .about-image {
+    box-shadow: var(--box-shadow-md);
+    transition: var(--transition-base);
+  }
+  
+  .about-image:hover {
+    transform: scale(1.02);
+  }
+  
+  .about-title {
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--secondary-color);
+  }
+  
+  .about-text {
+    color: var(--dark-gray);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+  }
+  
+  .about-features {
+    margin-top: var(--spacing-lg);
+  }
+  
+  .feature {
+    display: flex;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background-color: rgba(255, 102, 0, 0.1);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-right: var(--spacing-md);
+  }
+  
+  .feature-text h5 {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+  }
+  
+  .feature-text p {
+    margin-bottom: 0;
+    color: var(--dark-gray);
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-xl) 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1529634506268-b35e36f5bd4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80') center/cover no-repeat;
+    opacity: 0.15;
+    z-index: 0;
+  }
+  
+  .cta-title {
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .cta-text {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .cta-buttons {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Services Section */
+  .services-section {
+    background-color: #f8f9fa;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 991px) {
+    .about-content {
+      margin-top: var(--spacing-lg);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cta-title {
+      font-size: 1.75rem;
+    }
+    
+    .cta-text {
+      font-size: 1rem;
+    }
+  }
+  

@@ -1,0 +1,191 @@
+
+/* Services Overview */
+.service-item {
+    padding: var(--spacing-xl) 0;
+    border-bottom: 1px solid var(--medium-gray);
+  }
+  
+  .service-item:first-child {
+    padding-top: 0;
+  }
+  
+  .service-item:last-child {
+    border-bottom: none;
+  }
+  
+  .service-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--box-shadow-md);
+  }
+  
+  .service-image {
+    transition: transform 0.5s ease;
+    width: 100%;
+  }
+  
+  .service-image-container:hover .service-image {
+    transform: scale(1.05);
+  }
+  
+  .service-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    box-shadow: var(--box-shadow-md);
+  }
+  
+  .service-title {
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--secondary-color);
+    position: relative;
+    padding-bottom: 15px;
+  }
+  
+  .service-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+  }
+  
+  .service-item-alt .service-title::after {
+    left: auto;
+    right: 0;
+  }
+  
+  .service-description {
+    color: var(--dark-gray);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+  }
+  
+  .service-features {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .service-features h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+  }
+  
+  .service-features ul {
+    padding-left: 20px;
+  }
+  
+  .service-features li {
+    margin-bottom: 8px;
+    color: var(--dark-gray);
+  }
+  
+  .service-price {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .service-price .price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  /* Additional Services */
+  .additional-service-card {
+    border: none;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--box-shadow-sm);
+    transition: var(--transition-base);
+    overflow: hidden;
+    padding: var(--spacing-md);
+  }
+  
+  .additional-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow-md);
+  }
+  
+  .additional-service-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 102, 0, 0.1);
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    transition: var(--transition-base);
+  }
+  
+  .additional-service-card:hover .additional-service-icon {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .additional-service-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    font-size: 1.25rem;
+  }
+  
+  .additional-service-description {
+    color: var(--dark-gray);
+    margin-bottom: 0;
+  }
+  
+  /* Booking Section */
+  .booking-section {
+    padding-bottom: var(--spacing-xl);
+  }
+  
+  .booking-container {
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--box-shadow-md);
+    padding: var(--spacing-lg);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 991px) {
+    .service-item {
+      padding: var(--spacing-lg) 0;
+    }
+    
+    .service-content {
+      margin-top: var(--spacing-md);
+    }
+    
+    .service-item-alt .service-title::after {
+      left: 0;
+      right: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      font-size: 1.5rem;
+    }
+    
+    .booking-container {
+      padding: var(--spacing-md);
+    }
+  }
+  

@@ -1,0 +1,93 @@
+
+/* Gallery Content */
+.gallery-content {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+  }
+  
+  /* Gallery Filters */
+  .gallery-filters {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .category-filter-btn {
+    border-radius: var(--border-radius-pill);
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+    margin: 0 0.5rem 0.5rem;
+  }
+  
+  /* Gallery Grid */
+  .gallery-grid {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  /* Load More Button */
+  .load-more-btn {
+    padding: 0.75rem 2.5rem;
+    font-weight: 500;
+  }
+  
+  /* No Items Found */
+  .no-items-found {
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--box-shadow-sm);
+  }
+  
+  .no-items-found h3 {
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .no-items-found p {
+    color: var(--dark-gray);
+  }
+  
+  /* Share Photos Section */
+  .share-photos-section {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .share-photos-content {
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--box-shadow-md);
+  }
+  
+  .share-photos-content h2 {
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--secondary-color);
+  }
+  
+  .share-photos-content p {
+    color: var(--dark-gray);
+    margin-bottom: var(--spacing-lg);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 991px) {
+    .share-photos-content {
+      padding: var(--spacing-md);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .share-photos-content h2 {
+      font-size: 1.75rem;
+    }
+  }
+  
