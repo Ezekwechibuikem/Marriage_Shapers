@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
-  faCalendarAlt, 
+  // faCalendarAlt, 
   //faClock, 
   //faMapMarkerAlt,
   faFilter
@@ -285,7 +285,7 @@ const Events = () => {
       </section>
       
       {/* Calendar Section */}
-      <section className="section calendar-section">
+      {/* <section className="section calendar-section">
         <Container>
           <Row className="justify-content-center">
             <Col lg={8} className="text-center">
@@ -307,10 +307,10 @@ const Events = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
       
       {/* Host an Event */}
-      <section className="section host-event-section bg-light">
+      {/* <section className="section host-event-section bg-light">
         <Container>
           <Row className="justify-content-center">
             <Col lg={8} className="text-center">
@@ -324,7 +324,7 @@ const Events = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
     </>
   );
 };

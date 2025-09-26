@@ -98,7 +98,7 @@ const Home = () => {
       {/* Hero Section */}
       <Hero
         title="Building Christ-Centered Relationships"
-        subtitle="Strengthening marriages and relationships through biblical principles and practical guidance."
+        subtitle="Strengthening marriages and relationships through proven principles and real-life strategies."
         buttonText="Book a Session"
         buttonLink="/contact"
         image={heroImage}
@@ -125,8 +125,7 @@ const Home = () => {
                   God's love and are the foundation of strong families and communities.
                 </p>
                 <p className="about-text">
-                  Our team of experienced counselors and pastors provide biblical guidance 
-                  and practical tools to navigate the joys and challenges of relationships.
+                  Our team of experienced counselors provide guidance and practical tools to navigate the joys and challenges of relationships.
                 </p>
                 <div className="about-features">
                   <div className="feature">
@@ -134,8 +133,8 @@ const Home = () => {
                       <FontAwesomeIcon icon={faBook} />
                     </div>
                     <div className="feature-text">
-                      <h5>Biblical Foundation</h5>
-                      <p>All our programs are rooted in scripture and God's design for relationships.</p>
+                      <h5>Lasting Relationships</h5>
+                      <p>We focus on building healthy foundations for strong, lasting, and fulfilling relationships.</p>
                     </div>
                   </div>
                   <div className="feature">
