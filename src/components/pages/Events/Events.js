@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
-  // faCalendarAlt, 
+  faCalendarAlt, 
   //faClock, 
   //faMapMarkerAlt,
   faFilter
