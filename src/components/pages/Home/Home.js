@@ -15,7 +15,7 @@ import SectionTitle from '../../common/SectionTitle';
 //import ServiceCard from '../../common/ServiceCard';
 import Testimonial from '../../common/Testimonial';
 import BlogCard from '../../common/BlogCard';
-import EventCard from '../../common/EventCard';
+// import EventCard from '../../common/EventCard';
 
 import './Home.css';
 import aboutImage from '../../../assets/images/MarriageShapers.jpg';
@@ -26,7 +26,7 @@ const heroImage = 'https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?
 const testimonialImage1 = 'https://randomuser.me/api/portraits/women/44.jpg';
 const testimonialImage2 = 'https://randomuser.me/api/portraits/men/32.jpg';
 const blogImage1 = 'https://images.unsplash.com/photo-1511405889574-b01de1da5441?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80';
-const eventImage = 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80';
+//const eventImage = 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80';
 
 const Home = () => {
   // Services data
@@ -265,7 +265,7 @@ const Home = () => {
       </section>
       
       {/* Upcoming Events Section */}
-      <section className="section events-section">
+      {/* <section className="section events-section">
         <Container>
           <SectionTitle
             title="Upcoming Events"
@@ -293,7 +293,7 @@ const Home = () => {
             </Button>
           </div>
         </Container>
-      </section>
+      </section> */}
     </>
   );
 };
