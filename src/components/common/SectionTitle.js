@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import './SectionTitle.css';
 
-const SectionTitle = ({ title, subtitle, center = true, light = false }) => {
+const SectionTitle = ({ title, subtitle, subsection, center = true, light = false }) => {
   return (
     <Row className="mb-5">
       <Col>

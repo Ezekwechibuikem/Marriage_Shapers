@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -21,7 +20,6 @@ import Testimonial from '../../common/Testimonial';
 
 import './Services.css';
 
-// Placeholder images (in a real project, these would be imported from assets)
 const heroImage = 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80';
 const premaritalImage = 'https://images.unsplash.com/photo-1494774157365-9e04c6720e47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80';
 const marriageImage = 'https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80';
@@ -30,7 +28,6 @@ const retreatImage = 'https://images.unsplash.com/photo-1469571486292-b536010103
 const testimonialImage = 'https://randomuser.me/api/portraits/men/42.jpg';
 
 const Services = () => {
-  // Services data
   const services = [
     {
       id: 'premarital',
@@ -123,7 +120,7 @@ const Services = () => {
       {/* Hero Section */}
       <Hero
         title="Our Services"
-        subtitle="Building stronger relationships through biblical principles and practical guidance."
+        subtitle="Guiding couples and individuals to build stronger, healthier relationships."
         image={heroImage}
         height="60vh"
       />
@@ -134,7 +131,16 @@ const Services = () => {
           <SectionTitle
             title="How We Can Help"
             subtitle="We offer a variety of services designed to strengthen relationships at every stage."
+            // subsection="For Married"
           />
+
+          <section className="section for-married">
+            <Container>
+              <SectionTitle
+                title="For Married"
+              />
+            </Container>
+          </section>
           
           {services.map((service, index) => (
             <div 
