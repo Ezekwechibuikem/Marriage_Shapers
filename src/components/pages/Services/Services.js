@@ -19,7 +19,7 @@ import {
 import Hero from '../../common/Hero';
 import SectionTitle from '../../common/SectionTitle';
 import BookingForm from '../../common/BookingForm';
-import Testimonial from '../../common/Testimonial';
+//import Testimonial from '../../common/Testimonial';
 
 import './Services.css';
 
@@ -27,7 +27,7 @@ const heroImage = 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?
 const mapImage = 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80';
 const emergencyImage = 'https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80';
 const executiveImage = 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80';
-const testimonialImage = 'https://randomuser.me/api/portraits/men/42.jpg';
+//const testimonialImage = 'https://randomuser.me/api/portraits/men/42.jpg';
 const oneONoneExecutiveResetImage = 'https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80';
 const couplesresetImage = 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80';
 const couplesretreatImage = 'https://images.unsplash.com/photo-1517164850305-99a3e65bb47e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80';
