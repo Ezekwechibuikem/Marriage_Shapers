@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Button, Card, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faHeart, 
-  faHandHoldingHeart, 
-  faUsers, 
-  faBook, 
+import {
+  faHeart,
+  faHandHoldingHeart,
+  faUsers,
+  faBook,
   faCalendarAlt,
   // faRing,
   faHandsHelping,
@@ -36,14 +36,26 @@ const forgivenesslabImage = 'https://images.unsplash.com/photo-1582213782179-e0d
 const Services = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
-  
+
+  const [showAdditionalModal, setshowAdditionalModal] = useState(false);
+  const [selectedAdditionalService, setSelectedAdditionalService] = useState(null);
+
   const handleShow = (service) => {
     setSelectedService(service);
     setShowModal(true);
   };
-  
+
   const handleClose = () => {
     setShowModal(false);
+  };
+
+  const handleAdditionalShow = (service) => {
+    setSelectedAdditionalService(service);
+    setshowAdditionalModal(true);
+  };
+
+  const handleAdditionalClose = () => {
+    setshowAdditionalModal(false);
   };
 
   const services = [
@@ -106,7 +118,7 @@ const Services = () => {
       description: 'A one-week personal training for individuals who want to find themselves again in marriage and become a better version of themselves.',
       fullDescription: `This is a one week personal training for individuals who would like to find themselves again in marriage. Do you feel lost in your marriage or would you want to become a better version of yourself in marriage? Then this plan is for you. This plan is also for you who wants to work towards a new life, whose partner has been complaining of some irrational behaviors and you feel there's a need to put aside old habits and develop a new one.`,
       image: oneONoneExecutiveResetImage,
-      icon: faBriefcase, // You can change this icon
+      icon: faBriefcase,
       features: [
         'One week intensive personal training',
         'One-on-one sessions with consultant',
@@ -172,51 +184,107 @@ const Services = () => {
       note: 'In this lab, you\'ll be taking through a three days session with the consultant, where you can release all of the negativity you feel and a prescription will be given that would help you overcome all resentment and setbacks.',
       keyDifference: 'This is not just counseling - it\'s a transformative lab experience designed to help you overcome forgiveness barriers that keep resurfacing.'
     }
-   
-    
+
+
   ];
-  
-  // ========================================
-  // ADDITIONAL SERVICES
-  // ========================================
-  // 📌 TO ADD MORE ADDITIONAL SERVICES:
-  // Copy one object and modify title, description, and icon
-  // ========================================
-  
+
+
   const additionalServices = [
     {
-      title: 'Singles Ministry',
-      description: 'Preparing singles for godly relationships and marriage through biblical teaching and community.',
-      icon: faUsers
+      title: 'The Matchmaking',
+      description: 'Looking for a kingdom partner for a kingdom marriage? Let us matchmake you with God\'s perfect will for you.',
+      icon: faUsers,
+      fullDescription: `Are you looking for a kingdom partner for a kingdom marriage? Is your one that is chasing a thousand ready to have a partner who would chase ten thousands? Then you should allow us matchmake you with God's perfect will for you.`,
+      features: [
+        {
+          step: 'Step One - Client Registration',
+          details: 'Fill the client\'s intake form by providing appropriate information where and when necessary.'
+        },
+        {
+          step: 'Step Two - Terms and Agreement',
+          details: 'Fill a consent/agreement form to ensure proper agreement between you and Marriage Shapers, preventing breach of agreement.'
+        },
+        {
+          step: 'Step Three - The Interview',
+          details: 'We do our due diligence to avoid faking or impersonation. This step determines if we\'ll continue with you.'
+        },
+        {
+          step: 'Step Four - Submission of Documents',
+          details: 'Submit proof of income, statement of account, business certificate/proof of ownership, ID card/referee from work and church. This ensures clients don\'t become liabilities and avoids fraud.'
+        },
+        {
+          step: 'Step Five - The Matching',
+          details: 'If remarks from steps 1-4 are satisfactory, we match you with the right person, marking the beginning of courtship.'
+        }
+      ],
+      note: 'With us there is no testing the waters. If you are ready to settle down within the next six to twelve months, then we are glad to help you out in this process.'
     },
     {
-      title: 'Family Counseling',
-      description: 'Helping families navigate challenges and build stronger relationships based on biblical principles.',
-      icon: faHandsHelping
+      title: 'The Forgiveness Lab',
+      description: 'Release resentment towards your ex or anyone that has been hindering you from moving forward or finding the right partner.',
+      icon: faHeart,
+      fullDescription: `This is for you who knows deep within that you have a resentment towards your ex or anyone and it has been an hindrance to moving forward or finding the right partner.`,
+      features: [
+        'Three-day intensive session with consultant',
+        'Release every pain and hurt from the past',
+        'Guided process to let go of resentment',
+        'Solutions for complete forgiveness',
+        'Remain permanently whole and healed',
+        'Move forward freely in relationships'
+      ],
+      objective: 'Under this, you will be taken through a three days session with a consultant who would hold you by the hands to release every pain and hurts of the past, and would provide you with solutions that will help you to completely forgive and to remain permanently whole.'
     },
     {
-      title: 'Marriage Mentoring',
-      description: 'Connecting younger couples with experienced mentor couples for guidance and support.',
-      icon: faHeart
+      title: 'The Identity Formation/Self Discovery',
+      description: 'For those feeling lost, unseen, unheard and questioning their identity. Rediscover who God created you to be.',
+      icon: faBook,
+      fullDescription: `This is for you who feels lost, unseen, unheard and questioning your identity. It is for you whose past relationship or experiences while growing up has damaged your identity and contributed to your inability to see yourself for who God has called and created you to be.`,
+      features: [
+        'Three-day transformative session',
+        'Learning and relearning process',
+        'Rediscover your true self',
+        'Become a new person',
+        'Replace negative self-talk with positive ones',
+        'Embrace your true being and identity'
+      ],
+      objective: 'It\'s a three day session that will help you through a learning and relearning process in order to rediscover yourself and become a new person. During these three days, you will learn to replace negative self-talk with positive ones, while embracing your being.'
     },
     {
-      title: 'Bible Studies',
-      description: 'Focused studies on marriage, relationships, and family life from a biblical perspective.',
-      icon: faBook
+      title: 'The Singles Retreat',
+      description: 'A weekend away to reconnect with your first love - God before finding love in human form.',
+      icon: faHandsHelping,
+      fullDescription: `This is a weekend away from home for you who would love to reconnect with your first love - God before finding love in human form.`,
+      features: [
+        'Weekend getaway from home',
+        'Reconnect with God - your first love',
+        'Rebuild and rekindle the fire on your altar',
+        'Gain insight for purposeful living',
+        'Connect with like-minded singles',
+        'Build community for godly living'
+      ],
+      objective: 'This retreat will help you to rebuild and rekindle the fire on your altar and will give you insight to help you live a purposeful life. It will also be an avenue to connect with other like-minded singles for a godly and purposeful living.'
     }
-    
+
     // ========================================
-    // 📌 ADD MORE ADDITIONAL SERVICES HERE
+    // 📌 TO ADD MORE SINGLES SERVICES:
     // ========================================
     /*
     {
       title: 'Service Name',
-      description: 'Service description',
-      icon: faIconName
+      description: 'Brief description',
+      icon: faIconName,
+      fullDescription: 'Full detailed description for modal',
+      features: [
+        'Feature 1',
+        'Feature 2',
+        'Feature 3'
+      ],
+      note: 'Optional note',
+      objective: 'Optional objective'
     }
     */
   ];
-  
+
   return (
     <>
       {/* Hero Section */}
@@ -226,7 +294,7 @@ const Services = () => {
         image={heroImage}
         height="60vh"
       />
-      
+
       {/* Services Overview */}
       <section className="section services-overview">
         <Container>
@@ -234,26 +302,26 @@ const Services = () => {
             title="For Married & Engaged Couples"
             subtitle="We offer a variety of services designed to strengthen relationships at every stage."
           />
-          
+
           {services.map((service, index) => (
-            <div 
-              className={`service-item ${index % 2 !== 0 ? 'service-item-alt' : ''}`} 
+            <div
+              className={`service-item ${index % 2 !== 0 ? 'service-item-alt' : ''}`}
               key={service.id}
               id={service.id}
             >
               <Row className="align-items-center">
                 <Col lg={6} className={`mb-4 mb-lg-0 ${index % 2 !== 0 ? 'order-lg-2' : ''}`}>
                   <div className="service-image-container">
-                    <img 
-                      src={service.image} 
-                      alt={service.title} 
+                    <img
+                      src={service.image}
+                      alt={service.title}
                       className="service-image img-fluid rounded"
                       style={{
                         width: '100%',
                         height: '400px',
                         objectFit: 'cover',
                         objectPosition: 'center'
-                      }}  
+                      }}
                     />
                     <div className="service-icon" style={{ backgroundColor: '#FF6600' }}>
                       <FontAwesomeIcon icon={service.icon} style={{ color: '#FFFFFF' }} />
@@ -264,10 +332,9 @@ const Services = () => {
                   <div className="service-content">
                     <h2 className="service-title" style={{ color: '#000000' }}>{service.title}</h2>
                     <p className="service-description" style={{ color: '#000000' }}>{service.description}</p>
-                    
-                    {/* Read More Button - Opens Modal */}
-                    <Button 
-                      variant="primary" 
+
+                    <Button
+                      variant="primary"
                       className="mt-3"
                       onClick={() => handleShow(service)}
                       style={{
@@ -285,15 +352,15 @@ const Services = () => {
           ))}
         </Container>
       </section>
-      
+
       {/* Additional Services */}
       <section className="section additional-services bg-light">
         <Container>
           <SectionTitle
-            title="Additional Services"
-            subtitle="More ways we support individuals, couples, and families."
+            title="For Singles"
+            subtitle="More ways we support singles in their journey toward godly relationships and marriage."
           />
-          
+
           <Row>
             {additionalServices.map((service, index) => (
               <Col lg={3} md={6} className="mb-4" key={index}>
@@ -308,6 +375,28 @@ const Services = () => {
                     <Card.Text className="additional-service-description" style={{ color: '#000000' }}>
                       {service.description}
                     </Card.Text>
+
+                    {/* 👇 ADD THIS BUTTON */}
+                    <Button
+                      variant="outline-primary"
+                      size="sm"
+                      onClick={() => handleAdditionalShow(service)}
+                      style={{
+                        borderColor: '#FF6600',
+                        color: '#FF6600',
+                        marginTop: '10px'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.target.style.backgroundColor = '#FF6600';
+                        e.target.style.color = '#FFFFFF';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.target.style.backgroundColor = 'transparent';
+                        e.target.style.color = '#FF6600';
+                      }}
+                    >
+                      Learn More
+                    </Button>
                   </Card.Body>
                 </Card>
               </Col>
@@ -315,24 +404,8 @@ const Services = () => {
           </Row>
         </Container>
       </section>
-      
-      {/* Testimonial */}
-      <section className="section testimonial-section">
-        <Container>
-          <Row className="justify-content-center">
-            <Col lg={8}>
-              <Testimonial
-                quote="The premarital counseling we received from Marriage Shapers was invaluable. It helped us address important topics before marriage and gave us practical tools that we still use today."
-                name="Robert & Lisa Thompson"
-                role="Married 3 years"
-                image={testimonialImage}
-                rating={5}
-              />
-            </Col>
-          </Row>
-        </Container>
-      </section>
-      
+
+     
       {/* Booking Section */}
       <section className="section booking-section bg-light">
         <Container>
@@ -354,7 +427,7 @@ const Services = () => {
           MODAL COMPONENT
           ========================================
           This modal displays detailed information
-          about the selected service when "Read More"
+          about the selected serviceb both for the married and single when "Read More"
           button is clicked
       ========================================== */}
       <Modal show={showModal} onHide={handleClose} centered size="lg">
@@ -363,13 +436,13 @@ const Services = () => {
             {selectedService?.title}
           </Modal.Title>
         </Modal.Header>
-        
+
         <Modal.Body style={{ maxHeight: '500px', overflowY: 'auto' }}>
           {/* Full Description */}
           <p style={{ color: '#000000', fontSize: '1.1rem', marginBottom: '20px' }}>
             {selectedService?.fullDescription}
           </p>
-          
+
           {/* Features Section */}
           <h5 style={{ color: '#FF6600', marginTop: '20px' }}>What's Included:</h5>
           <ul style={{ color: '#000000' }}>
@@ -398,12 +471,12 @@ const Services = () => {
               </li>
             ))}
           </ul>
-          
+
           {/* Key Difference Section */}
           {selectedService?.keyDifference && (
-            <div style={{ 
-              backgroundColor: '#fff3e0', 
-              padding: '15px', 
+            <div style={{
+              backgroundColor: '#fff3e0',
+              padding: '15px',
               borderRadius: '5px',
               borderLeft: '4px solid #FF6600',
               marginTop: '20px'
@@ -414,12 +487,12 @@ const Services = () => {
               </p>
             </div>
           )}
-          
+
           {/* Note Section */}
           {selectedService?.note && (
-            <div style={{ 
-              backgroundColor: '#e3f2fd', 
-              padding: '15px', 
+            <div style={{
+              backgroundColor: '#e3f2fd',
+              padding: '15px',
               borderRadius: '5px',
               marginTop: '20px'
             }}>
@@ -428,12 +501,12 @@ const Services = () => {
               </p>
             </div>
           )}
-          
+
           {/* Objective Section */}
           {selectedService?.objective && (
-            <div style={{ 
-              backgroundColor: '#f1f8e9', 
-              padding: '15px', 
+            <div style={{
+              backgroundColor: '#f1f8e9',
+              padding: '15px',
               borderRadius: '5px',
               marginTop: '20px'
             }}>
@@ -443,7 +516,7 @@ const Services = () => {
               </p>
             </div>
           )}
-          
+
           {/* Price Section (if available) */}
           {selectedService?.price && (
             <div style={{ marginTop: '20px' }}>
@@ -453,11 +526,11 @@ const Services = () => {
             </div>
           )}
         </Modal.Body>
-        
+
         <Modal.Footer style={{ borderTop: '2px solid #FF6600' }}>
           {/* Close Button */}
-          <Button 
-            variant="secondary" 
+          <Button
+            variant="secondary"
             onClick={handleClose}
             style={{
               backgroundColor: '#000000',
@@ -467,12 +540,12 @@ const Services = () => {
           >
             Close
           </Button>
-          
+
           {/* Book This Service Button - Links to Contact Page */}
-          <Button 
-            variant="primary" 
-            as={Link} 
-            to="/contact" 
+          <Button
+            variant="primary"
+            as={Link}
+            to="/contact"
             onClick={handleClose}
             style={{
               backgroundColor: '#FF6600',
@@ -484,6 +557,116 @@ const Services = () => {
           </Button>
         </Modal.Footer>
       </Modal>
+
+      <Modal show={showAdditionalModal} onHide={handleAdditionalClose} centered size="lg">
+        <Modal.Header closeButton style={{ borderBottom: '2px solid #FF6600' }}>
+          <Modal.Title style={{ color: '#000000' }}>
+            {selectedAdditionalService?.title}
+          </Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body style={{ maxHeight: '500px', overflowY: 'auto' }}>
+          {/* Full Description */}
+          <p style={{ color: '#000000', fontSize: '1.1rem', marginBottom: '20px' }}>
+            {selectedAdditionalService?.fullDescription}
+          </p>
+
+          {/* Features Section */}
+          {selectedAdditionalService?.features && (
+            <>
+              <h5 style={{ color: '#FF6600', marginTop: '20px' }}>
+                {selectedAdditionalService.title === 'The Matchmaking' ? 'The Five-Step Process:' : 'What\'s Included:'}
+              </h5>
+              <ul style={{ color: '#000000', listStyle: 'none', paddingLeft: '0' }}>
+                {selectedAdditionalService.features.map((feature, i) => (
+                  <li key={i} style={{ marginBottom: '15px' }}>
+                    {typeof feature === 'string' ? (
+                      // Simple feature with checkmark
+                      <div style={{ display: 'flex', alignItems: 'flex-start' }}>
+                        <span style={{ color: '#FF6600', marginRight: '10px', fontSize: '1.2rem' }}>✓</span>
+                        <span>{feature}</span>
+                      </div>
+                    ) : (
+                      // Step-by-step feature (for Matchmaking)
+                      <div style={{
+                        backgroundColor: '#f8f9fa',
+                        padding: '15px',
+                        borderRadius: '8px',
+                        borderLeft: '4px solid #FF6600',
+                        marginBottom: '10px'
+                      }}>
+                        <strong style={{ color: '#FF6600', display: 'block', marginBottom: '8px' }}>
+                          {feature.step}
+                        </strong>
+                        <span style={{ color: '#000000' }}>{feature.details}</span>
+                      </div>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {/* Objective Section */}
+          {selectedAdditionalService?.objective && (
+            <div style={{
+              backgroundColor: '#f1f8e9',
+              padding: '15px',
+              borderRadius: '5px',
+              marginTop: '20px'
+            }}>
+              <strong style={{ color: '#689f38' }}>What You'll Achieve:</strong>
+              <p style={{ color: '#000000', marginBottom: 0, marginTop: '5px' }}>
+                {selectedAdditionalService.objective}
+              </p>
+            </div>
+          )}
+
+          {/* Note Section */}
+          {selectedAdditionalService?.note && (
+            <div style={{
+              backgroundColor: '#fff3e0',
+              padding: '15px',
+              borderRadius: '5px',
+              borderLeft: '4px solid #FF6600',
+              marginTop: '20px'
+            }}>
+              <strong style={{ color: '#FF6600' }}>Important Note:</strong>
+              <p style={{ color: '#000000', marginBottom: 0, marginTop: '5px' }}>
+                {selectedAdditionalService.note}
+              </p>
+            </div>
+          )}
+        </Modal.Body>
+
+        <Modal.Footer style={{ borderTop: '2px solid #FF6600' }}>
+          <Button
+            variant="secondary"
+            onClick={handleAdditionalClose}
+            style={{
+              backgroundColor: '#000000',
+              borderColor: '#000000',
+              color: '#FFFFFF'
+            }}
+          >
+            Close
+          </Button>
+          <Button
+            variant="primary"
+            as={Link}
+            to="/contact"
+            onClick={handleAdditionalClose}
+            style={{
+              backgroundColor: '#FF6600',
+              borderColor: '#FF6600',
+              color: '#FFFFFF'
+            }}
+          >
+            Get Started
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
     </>
   );
 };
