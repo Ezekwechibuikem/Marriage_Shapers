@@ -32,19 +32,19 @@ const Contact = () => {
                   <div className="contact-icon">
                     <FontAwesomeIcon icon={faMapMarkerAlt} />
                   </div>
-                  <Card.Title className="contact-title">Our Location</Card.Title>
+                  <Card.Title className="contact-title">Connect With Us</Card.Title>
                   <Card.Text className="contact-text">
-                    Chevron drive,<br />
-                    eti Osa local government
+                    We are available online,<br />
+                    to serve clients everywhere
                   </Card.Text>
-                  <a 
+                  {/* <a 
                     href="https://maps.google.com" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="contact-link"
                   >
                     Get Directions
-                  </a>
+                  </a> */}
                 </Card.Body>
               </Card>
             </Col>
@@ -79,11 +79,10 @@ const Contact = () => {
                   </div>
                   <Card.Title className="contact-title">Call Us</Card.Title>
                   <Card.Text className="contact-text">
-                    +234 812 215 0640<br />
-                    +234 812 215 0640
+                    +234 816 519 9373                   {/* +234 816 519 9373 */}
                   </Card.Text>
                   <a 
-                    href="tel:+234 812 215 0640" 
+                    href="tel:+234 816 519 9373" 
                     className="contact-link"
                   >
                     Call Now
@@ -147,7 +146,7 @@ const Contact = () => {
       </section>
       
       {/* Map Section */}
-      <section className="section map-section">
+      {/* <section className="section map-section">
         <div className="map-container">
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0674431817924!2d-122.41941708468204!3d37.77492997975918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5158e35!2sTwitter%20HQ!5e0!3m2!1sen!2sus!4v1626887555948!5m2!1sen!2sus" 
@@ -159,7 +158,7 @@ const Contact = () => {
             title="Marriage Shapers Location"
           ></iframe>
         </div>
-      </section>
+      </section> */}
       
       {/* Social Media Section */}
       <section className="section social-media-section bg-light">
