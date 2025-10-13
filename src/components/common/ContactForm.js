@@ -12,39 +12,38 @@ const ContactForm = ({ showTitle = true }) => {
     setSending(true);
     setMessage({ type: "", text: "" });
 
-    emailjs
-      .sendForm(
-        "service_hdb1s4i",
-        "template_vm4i1zm",
-        formRef.current,
-        "5Avhvcx3l9mQ2X2MY"
-      )
+    emailjs.sendForm(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      formRef.current,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    )
       .then(
-        (result) => {
-          console.log("SUCCESS!", result.text);
-          setMessage({
-            type: "success",
-            text: "✅ Message sent successfully! We'll respond within 24 hours.",
-          });
-          formRef.current.reset();
-          setSending(false);
-          
-          setTimeout(() => {
-            setMessage({ type: "", text: "" });
-          }, 5000);
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-          setMessage({
-            type: "error",
-            text: "❌ Failed to send message. Please try again or email us at marriageshapers@gmail.com",
-          });
-          setSending(false);
-        }
-      );
+      (result) => {
+        console.log("SUCCESS!", result.text);
+        setMessage({
+          type: "success",
+          text: "✅ Message sent successfully! We'll respond within 24 hours.",
+        });
+        formRef.current.reset();
+        setSending(false);
+
+        setTimeout(() => {
+          setMessage({ type: "", text: "" });
+        }, 5000);
+      },
+      (error) => {
+        console.log("FAILED...", error.text);
+        setMessage({
+          type: "error",
+          text: "❌ Failed to send message. Please try again or email us at marriageshapers@gmail.com",
+        });
+        setSending(false);
+      }
+    );
   };
 
-  return (
+return (
     <div className="contact-form-container">
       {showTitle && (
         <h3 className="contact-form-title text-center mb-4">Get in Touch</h3>
